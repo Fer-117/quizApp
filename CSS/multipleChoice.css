@@ -42,18 +42,19 @@ main {
     padding: 10px;
     width: 50%;
 }
-/* li {
+ li {
     width: 30%;
     background-color: purple;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
     list-style: none;
-} */
+} 
+li form {
+    text-align: left;
+    width: 100%;
+}
 li button {
-    width: 30%;
-    height: 50px;
-    margin-left: 0px;
     text-align: left;
     background-color: purple;
     border: none;
