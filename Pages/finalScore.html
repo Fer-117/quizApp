@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="highScore">
-            <a href="/Pages/highScore.html"><p>View high scores</p></a>
+            <a href="highScore.html"><p>View high scores</p></a>
         </div>
        
         <div class="timer">
@@ -21,15 +21,15 @@
 
     <main>
         <h1>All done!</h1>
-        <p>your final score is 22.</p>
-        <form action="/Pages/highScore.html">
+        <p>your final score is <span class="score"></span></p>
+        <form action="highScore.html">
             <label for="initials"> Enter initials:</label>
             <input type="text" name="initials" id="initials">
             <input type="submit">
         </form>
     </main>
 
-    <script src="/JS/script.js"></script>
+    <script src="../JS/script.js"></script>
 
 </body>
 </html>
