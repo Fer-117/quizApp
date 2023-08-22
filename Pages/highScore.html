@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/multipleChoice.css">
-    <title>Coding Quiz Challenge</title>
-</head>
-<body>
-    <header>
-        <div class="highScore">
-            <a href="/Pages/highScore.html"><p>View high scores</p></a>
-        </div>
-       
-        <div class="timer">
-            <p>Time: <span class="timerCountdown">75</span></p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
 
-    </header>
-
-    <main>
+    <title>Coding Quiz</title>
+  </head>
+  <body>
+    <section class="highScoreSection">
+      <div class="highScoreContainer">
         <h1>High scores</h1>
-        <ul>
-            
-        </ul>
-        <form action="/index.html">
-            <button>Go back</button>
-        </form>
-        <form action="">
-            <button>Clear high scores</button>
-        </form>
-        
-    </main>
+        <div>
+          <ul id="highScoreInitials" class="highScoreInitials"></ul>
+        </div>
 
-    <script src="/JS/script.js"></script>
+        <div class="buttons">
+          <a href="../index.html">
+            <button id="goBack">Go back</button>
+          </a>
+          <button id="clearHighscore">Clear high scores</button>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <script src="../JS/highscore.js"></script>
+    <script src="../JS/script.js"></script>
+  </body>
 </html>

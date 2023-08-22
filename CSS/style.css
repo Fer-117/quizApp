@@ -1,54 +1,115 @@
 body {
-    display: block;
-    margin: 0;
-    font-family:Arial, Helvetica, sans-serif;
+  display: block;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* header part of the quiz app, includes highscore link and timer */
 header {
-    display: flex;
-    height: 100px;
-    
+  display: block;
+  height: 100px;
 }
-a:link{
-    text-decoration: none;
-}
-a:visited { 
-    text-decoration: none; 
-}
-a:hover { 
-    text-decoration: none; 
-}
-a:active { 
-    text-decoration: none; 
+.highScoreTimerContainer {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
 }
 .highScore {
-   margin-right: auto;
-   margin-bottom: auto;
-   padding: 15px;
-   color: rgb(170, 56, 126);
+  justify-content: flex-start;
+  margin-bottom: auto;
+  padding: 15px;
+  color: rgb(170, 56, 126);
 }
 .timer {
-    margin-left: auto;
-    margin-bottom: auto;
-    display: flex;
-    justify-content: end;
-    padding: 15px;
+  justify-content: flex-end;
+  flex: auto;
+  margin-right: 15px;
+  margin-bottom: auto;
+  text-align: right;
+  padding: 15px;
 }
 
-main {
-    display: block;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
-    width: 50%;
+/* Quiz questions part */
+section {
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
 }
-main button {
-    margin-top: 30px;
-    text-decoration: none;
-    background-color: purple;
-    color: white;
-    border-radius: 5px;
-    height: 35px;
-    width: 100px;
-    border: none;
+.titleContainer {
+  border-bottom: 1px solid rgb(173, 172, 172, 0.5);
+}
+button {
+  margin-top: 30px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  border: none;
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(124, 121, 126, 0.5);
+  transform: translate(-0.1rem);
+  transition: transform 150ms;
+}
+.button[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+#optionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#optionContainer button {
+  width: 200px;
+  height: 50px;
+}
+#answerMessage {
+  margin: 20px;
+  padding: 20px;
+  border-top: 1px solid rgb(173, 172, 172, 0.5);
+}
+
+.hide {
+  display: none;
+}
+
+/* highscore section*/
+
+.highScoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.highScoreInitials {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.highScoreInitials li {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  background-color: rgb(160, 65, 160);
+  border-radius: 5px;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+a {
+  text-decoration: none;
+  color: purple;
 }
