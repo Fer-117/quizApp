@@ -5,33 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/style.css" />
-    <title>Coding Quiz Challenge</title>
+
+    <title>Coding Quiz</title>
   </head>
+
   <body>
     <header>
-      <div class="highScore">
-        <a href="./Pages/highScore.html"><p>View high scores</p></a>
+      <div class="highScoreTimerContainer">
+        <div class="highScore">
+          <a href="./Pages/highscore.html"><p>View high scores</p></a>
+        </div>
+        <div class="timer hide">
+          <p>Time: <span class="timerCountdown">50</span></p>
+        </div>
       </div>
-
-      <!-- <div class="timer">
-        <p>Time: <span class="timerCountdown">75</span></p>
-      </div> -->
     </header>
 
-    <main>
-      <h1>Coding Quiz Challenge</h1>
-      <p>
-        Try to answer the following code-related questions within the time
-        limit. Keep in mind that incorrect answers will penalize your score/time
-        by ten seconds!
-      </p>
+    <section class="landingPageSection">
+      <div class="landingPage">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </p>
 
-      <form action="./Pages/questions.html">
-        <button>Start Quiz</button>
-      </form>
-    </main>
+        <button id="startQuiz">Start Quiz</button>
+      </div>
+    </section>
+
+    <section class="questionSection hide">
+      <div class="questionContainer" data-question="1">
+        <div class="titleContainer">
+          <h1 id="title"></h1>
+        </div>
+        <div id="optionContainer">
+          <button class="question" data-option="1" data-answer="wrong">
+            1. strings
+          </button>
+          <button class="question" data-option="2" data-answer="wrong">
+            2. booleans
+          </button>
+          <button class="question" data-option="3" data-answer="correct!">
+            3. parenthesis
+          </button>
+          <button class="question" data-option="4" data-answer="wrong">
+            4. numbers
+          </button>
+        </div>
+        <p id="answerMessage"></p>
+      </div>
+    </section>
+
+    <section class="finalScore hide">
+      <div class="finalScoreContainer">
+        <h1>All done!</h1>
+        <p>your final score is: <span class="score"></span></p>
+        <form>
+          <label for="initials"> Enter initials:</label>
+          <input id="inputInitials" type="text" name="initials" />
+        </form>
+        <a href="./Pages/highscore.html"
+          ><button id="submitBtn">submit</button></a
+        >
+      </div>
+    </section>
+
     <script src="./JS/questionArray.js"></script>
-
     <script src="./JS/script.js"></script>
   </body>
 </html>
